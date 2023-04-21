@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&family=Lato:ital,wght@0,400;1,900&family=Oswald:wght@400;500&family=PT+Serif:ital,wght@1,700&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&family=Lato:ital,wght@0,400;1,900&family=Oswald:wght@400;500&family=PT+Serif:ital,wght@1,700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/program.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="home.html">
+                <img src="resors/eko_okna_logo.svg" alt="">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="program.html">Program</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="rysunki.html">Rysunki</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main class="main">
+        <section class="one-section">
+            <div class="opis-tresci">
+                <h3 class="one-title">Witamy na stolarni Eko-Okna</h3>
+                <p class="one-opis">Na tej stronie mamy różnie programy,
+                    króre ułatfiają pracę zwykłych pracowników - okuwaczy ram.
+                    Dla okuwania ram pracownik kożysta z szablonów do okucia i 
+                    kartek z wymiarami w wrębie okuciowym skrzydeł.
+                </p>
+                <p class="one-opis">
+                    Proponujemy takie programy:
+                </p>
+                <ol class="one-item">
+                    <li>Program dla okucia ram jednoskrzydłowych</li>
+                    <li>Program dla okucia ram dwóskrzydłowych</li>
+                    <li>Program - numer rozwórki kryty zawias?</li>
+                </ol>
+            </div>
+        </section>
+        <section class="two-section">
+            <h3 class="two-title">Program dla okucia jednoskrzydłowych ram</h3>
+            <h3 class="two-title" id="typ-okucia">Program dla okucia</h3>
+            <div class="two-box">
+              <div class="two-input">
+                <input type="text" class="entry" id="entry-width" placeholder="Szerokość skrzydła">
+                <input type="text" class="entry" id="entry-height" placeholder="Wysokość skrzydła">
+                <input type="text" class="entry" id="klamka" placeholder="Klamka">
+                <button class="but" onclick="standart()">Standart</button>
+                <button class="but" onclick="erc_one()">Poz ER 1</button>
+                <button class="but" onclick="erc_two()">Poz ER 2</button>
+              </div>
+              <div class="two-res-name">
+                <p class="res">Gora:</p>
+                <p class="res">Plecy:</p>
+                <p class="res">Zasuwnica:</p>
+                <p class="res">Dol:</p>
+                <p class="res">NSP:</p>
+              </div>
+              <div class="two-res">
+                <p class="res gora" id="gora"></p>
+                <p class="res plecy" id="pl"></p>
+                <p class="res zas" id="zas"></p>
+                <p class="res dol" id="dol"></p>
+                <p class="res nsp" id="nsp"></p>
+              </div>
+            </div>
+        </section>
+        <section class="free-section">
+            <h3 class="two-title">Program dla okucia dwóskrzydłowych ram</h3>
+            <div class="free-box">
+                <p>gvjhjh</p>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/program-one.js"></script>
+</body>
+</html>
