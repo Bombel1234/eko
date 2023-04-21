@@ -1,0 +1,11 @@
+.card{
+    margin: 10px;
+    border-color: black;
+}
+.row{
+    padding-left: 10px;
+}
+.my-video{
+    width: 600px;
+    height: 500px;
+}
