@@ -133,9 +133,14 @@
     .res{
         font-size: 30px;
     }
+    .text-str,
+    .my-info{
+        font-size: 30px;
+    }
 }
 @media(max-width:650px){
-    .two-res-name{
+    .two-res-name,
+    .text-str{
         display: none;
     }
     .two-box{
