@@ -147,7 +147,8 @@
     .xx-container{
         display: block;
     }
-    .two-res{
+    .two-res,
+    .free-result{
         text-align: center;
     }
     .free-box{
