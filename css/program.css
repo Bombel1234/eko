@@ -43,13 +43,13 @@
 .entry{
     display: block;
     margin: 15px auto;
-    width: 140px;
+    width: 160px;
     border-color: blue;
     border-radius: 10px;
     transition: 0.7s;
 }
 .entry:hover{
-    width: 150px;
+    width: 170px;
     border-color: red;
 }
 .but{
