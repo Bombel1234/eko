@@ -4,21 +4,17 @@ function standart() {
     let width = document.getElementById('entry-width').value;
     let height = document.getElementById('entry-height').value;
     let klamka = document.getElementById('klamka').value;
-    document.getElementById('typ-okucia').innerText = 'STANDART'
-
+    document.getElementById('typ-okucia').innerText = 'Poziom zabezpieczenia okucia: STANDART >>> schemat okucia na rysunku 1';
+    document.getElementById('clear').style.display = 'block';
     
     if (height>2800){
         alert('UWAGA: NIEMA TAKICH WYMIARÓW -->WYSOKOŚĆ')
-        document.getElementById('zas').innerText = '';
-        document.getElementById('dol').innerText = '';
-        document.getElementById('gora').innerText = '';
-        document.getElementById('pl').innerText = '';
-        document.getElementById('nsp').innerText = '';
+        data_delete();
     }
     
-    else{
-        select_plecy(height);
+    else{ 
         select_zasuwnica(height, klamka);
+        select_plecy(height);
         myfunc_std(width);
         myfunc_std1(width);
     }
@@ -32,7 +28,7 @@ function myfunc_std(width) {
         document.getElementById('dol').innerText = 600;
     }
     else if (width > 1400 && width <= 1600) {
-        alert('UWAGA: DODATKOWA NOZYCA: Rysunek №4')
+        alert('UWAGA: DODATKOWY UCHYŁ >>>> Instrukcja na rys 4')
         document.getElementById('dol').innerText = '600   400';
     }
     else if (width > 1600) {
@@ -63,15 +59,12 @@ function erc_one() {
     let width = document.getElementById('entry-width').value;
     let height = document.getElementById('entry-height').value;
     let klamka = document.getElementById('klamka').value;
-    document.getElementById('typ-okucia').innerText = 'ER 1';
-    
+    document.getElementById('typ-okucia').innerText = 'Poziom zabezpieczenia okucia: ER 1 >>> Schemat okucia na rysunku 2' ;
+    document.getElementById('clear').style.display = 'block';
+   
     if (height>2800){
-        alert('UWAGA: NIE MAMY TAKICH WYMIARÓW ---> wysokość')
-        document.getElementById('zas').innerText = '';
-        document.getElementById('dol').innerText = '';
-        document.getElementById('gora').innerText = '';
-        document.getElementById('pl').innerText = '';
-        document.getElementById('nsp').innerText = '';
+        alert('UWAGA: NIE MAMY TAKICH WYMIARÓW ---> wysokość');
+        data_delete();
     }
     else{
         select_plecy(height)
@@ -121,12 +114,6 @@ function myfuncer_1(width) {
         document.getElementById('gora').innerText = 'AX-750';
     }  
 }
-    
-
-
-
-
-
 
 // poziom zabezpieczenia ER 2
 
@@ -134,14 +121,12 @@ function erc_two() {
     let width = document.getElementById('entry-width').value;
     let height = document.getElementById('entry-height').value;
     let klamka = document.getElementById('klamka').value;
-    document.getElementById('typ-okucia').innerText = 'ER-2';
+    document.getElementById('typ-okucia').innerText = 'Pozim zabezpieczenia okucia: ER 2 >>> Schemat okucia na rysunku 3';
+    document.getElementById('clear').style.display = 'block';
+    
     if (height>2600){
         alert('UWAGA: NIE MAMY TAKICH ZAKRESÓW --> WYSOKOŚĆ')
-        document.getElementById('pl').innerText = '';
-        document.getElementById('dol').innerText = '';
-        document.getElementById('gora').innerText = '';
-        document.getElementById('pl').innerText = '';
-        document.getElementById('nsp').innerText = '';
+        data_delete();
     }
     else{
         myfuncEr2_1(height);
@@ -153,6 +138,7 @@ function erc_two() {
 function myfuncEr2_1(height) {
     document.getElementById('dol').style.color = 'yellow';
     document.getElementById('gora').style.color = 'blue';
+    
     //plecy
     if (height<490){
         document.getElementById('pl').innerText = 'niema nic';
@@ -185,22 +171,23 @@ function myfuncEr2_1(height) {
     else if (height>2200 && height<=2400){
         document.getElementById('pl').innerText = '600 600 600';
     }
-    else if (height>2401 && height<=2600){
-        document.getElementById('pl1').innerText = '600 600 600 200';
+    else if (height>=2401 && height<=2600){
+        document.getElementById('pl').innerText = '600 600 600 200';
     }
    
 }
 function myfuncEr2_2(height, klamka) {
+    
     //zasuwnica
-    if(height>600 && height<=800 && klamka == 263){
+    if(height>600 && height<=800 && klamka == 283){
         document.getElementById('zas').innerText = 'niema nic';
         document.getElementById('nsp').innerText = 350;
     }
-    else if(height>800 && height<=1000 && klamka == 413){
+    else if(height>800 && height<=1000 && klamka == 433){
         document.getElementById('zas').innerText = '550';
         document.getElementById('nsp').innerText = '288';
     }
-    else if(height>1000 && height<=1200 && klamka == 513){
+    else if(height>1000 && height<=1200 && klamka == 533){
         document.getElementById('zas').innerText = '700';
         document.getElementById('nsp').innerText = '388';
     }
@@ -216,29 +203,25 @@ function myfuncEr2_2(height, klamka) {
         document.getElementById('zas').innerText = '700 1370';
         document.getElementById('nsp').innerText = '388';
     }
-    else if(height>1600 && height<=1800 && klamka == 1000){
+    else if(height>1600 && height<=1800 && klamka == 1020){
         document.getElementById('zas').innerText = '700 1370';
         document.getElementById('nsp').innerText = '1121';
     }
-    else if(height>1800 && height<=2000 && klamka == 1000){
+    else if(height>1800 && height<=2000 && klamka == 1020){
         document.getElementById('zas').innerText = '700 1370';
         document.getElementById('nsp').innerText = '1121';
     }
-    else if(height>2000 && height<=2400 && klamka == 1000){
+    else if(height>2000 && height<=2400 && klamka == 1020){
         document.getElementById('zas').innerText = '700 1370 1770';
         document.getElementById('nsp').innerText = '1121';
     }
-    else if (height>2400 && height<=200 && klamka==1000){
+    else if (height>2400 && height<=2600 && klamka==1020){
         document.getElementById('zas').innerText = '???';
         document.getElementById('nsp').innerText = '???';
     }
     else{
         alert('UWAGA:NIESTANDART---> klamka albo zakres')
-        document.getElementById('zas').innerText = '';
-        document.getElementById('pl').innerText = '';
-        document.getElementById('nsp').innerText = '';
-        document.getElementById('dol').style.color = '#B7C0BD';
-        document.getElementById('gora').style.color = '#B7C0BD';
+        data_delete();
     }
 }
 function myfuncEr2_3(width) {
@@ -285,9 +268,11 @@ function myfuncEr2_4(width) {
 
 // #######################################
 function select_plecy(height) {
+    if(height<280){
+        document.getElementById('pl').innerText = ''; 
+    }
     if (height<800){
-        document.getElementById('pl').innerText = 'niema nic';
-        
+        document.getElementById('pl').innerText = 'niema nic';  
     }
     if (height > 800 && height <= 1200) {
         document.getElementById('pl').innerText = 400;
@@ -312,68 +297,65 @@ function select_plecy(height) {
 
 }
 function select_zasuwnica(height, klamka) {
+    
     document.getElementById('dol').style.color = 'yellow';
     document.getElementById('gora').style.color = 'blue';
     
-    if (height < 280 && klamka != '') {
+    
+    if (height>=280 && height<=570 && klamka==140) {
         document.getElementById('zas').innerText = 'niema nic';
         document.getElementById('nsp').innerText = 'niema nic';
     }
-    else if (height>=280 && height<=570 && klamka==120) {
-        document.getElementById('zas').innerText = 'niema nic';
-        document.getElementById('nsp').innerText = 'niema nic';
-    }
-    else if (height>=511 && height<=600 && klamka==170) {
+    else if (height>=511 && height<=600 && klamka==190) {
         document.getElementById('zas').innerText = 'niema nic';
         document.getElementById('nsp').innerText = 262;
     }
-    else if (height>600 && height<=800 && klamka==263) {
+    else if (height>600 && height<=800 && klamka==283) {
         document.getElementById('zas').innerText = 'niema nic';
         document.getElementById('nsp').innerText = '350';
     }
-    else if (height>800 && height<=1000 && klamka==413) {
+    else if (height>800 && height<=1000 && klamka==433) {
         document.getElementById('zas').innerText = '550';
         document.getElementById('nsp').innerText = '288';
     }
-    else if (height>1000 && height <=1200 && klamka==513) {
+    else if (height>1000 && height <=1200 && klamka==533) {
         document.getElementById('zas').innerText = '700';
         document.getElementById('nsp').innerText = '388';
     }
-    else if (height>1200 && height<=1400 && klamka==563) {
+    else if (height>1200 && height<=1400 && klamka==583) {
         document.getElementById('zas').innerText = '700';
         document.getElementById('nsp').innerText = '388';
     }
-    else if (height>1400 && height<=1600 && klamka==563) {
+    else if (height>1400 && height<=1600 && klamka==583) {
         document.getElementById('zas').innerText = '700 1170';
         document.getElementById('nsp').innerText = '388';
     }
-    else if (height > 1600 && height <=1800 && klamka==563) {
+    else if (height > 1600 && height <=1800 && klamka==583) {
         document.getElementById('zas').innerText = '700 1370';
         document.getElementById('nsp').innerText = '388';
     }
-    else if (height>1600 && height<=1800 && klamka==1000) {
+    else if (height>1600 && height<=1800 && klamka==1020) {
         document.getElementById('zas').innerText = '700 1370';
         document.getElementById('nsp').innerText = '1121';
     }
-    else if (height>1800 && height<=2000 && klamka==1000) {
+    else if (height>1800 && height<=2000 && klamka==1020) {
         document.getElementById('zas').innerText = '700 1370';
         document.getElementById('nsp').innerText = '1121';
     }
-    else if (height>2000 && height<=2600 && klamka==1000) {
+    else if (height>2000 && height<=2600 && klamka==1020) {
         document.getElementById('zas').innerText = '700 1370 1770';
         document.getElementById('nsp').innerText = '1121';
     }
-    else if (height>2600 && height<=2800 && klamka == 1000) {
+    else if (height>2600 && height<=2800 && klamka == 1020) {
         document.getElementById('zas').innerText = '+MV??';
         document.getElementById('nsp').innerText = '???';
     }
     else {
+        data_delete();
         alert('UWAGA: NIESTANDART!!! --> klamka albo zakres')
-        document.getElementById('dol').style.color = '#B7C0BD';
-        document.getElementById('gora').style.color = '#B7C0BD';
-        document.getElementById('pl').innerText = '';
-        document.getElementById('zas').innerText = '';
-        document.getElementById('nsp').innerText = '';
     }
     
+}
+function data_delete() {
+    document.getElementById('clear').style.display = 'none';
 }
