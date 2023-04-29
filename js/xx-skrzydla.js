@@ -166,7 +166,7 @@ function func_er2() {
 
     if (height>2600){
         alert('UWAGA: NIE MAMY TAKICH ZAKRESÓW ---> WYSOKOŚĆ');
-        document.getElementById('my-pl').innerText = '';
+        document.getElementById('my-plecy').innerText = '';
         document.getElementById('my-dot').innerText = ''; 
         document.getElementById('my-ora').innerText = '';
         document.getElementById('my-dol').innerText = '';   
@@ -180,23 +180,23 @@ function func_er2() {
 function myfunc_a(height) {
     //plecy
     if (height<490){
-        document.getElementById('my-pl').innerText = 'niema nic';
+        document.getElementById('my-plecy').innerText = 'niema nic';
         document.getElementById('my-dot').innerText = 'niema nic';
     }
     else if (height>=490 && height<=800){
-        document.getElementById('my-pl').innerText = 200;
+        document.getElementById('my-plecy').innerText = 200;
         document.getElementById('my-dot').innerText = 200;
     }
     else if (height>800 && height<=1000){
-        document.getElementById('my-pl').innerText = 400;
+        document.getElementById('my-plecy').innerText = 400;
         document.getElementById('my-dot').innerText = 400;
     }
     else if (height>1000 && height<=1200){
-        document.getElementById('my-pl').innerText = 600;
+        document.getElementById('my-plecy').innerText = 600;
         document.getElementById('my-dot').innerText = 600;
     }
     else if (height>1200 && height<=1400){
-        document.getElementById('my-pl').innerText = '600   200';
+        document.getElementById('my-plecy').innerText = '600   200';
         document.getElementById('my-dot').innerText = '600   200';
     }
     else if (height>1400 && height<=1600){
