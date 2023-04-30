@@ -74,9 +74,9 @@
       <h3 class="two-title active-title" id="typ-okucia">Poziom zabezpieczenia okucia</h3>
       <div class="two-box">
         <div class="two-input">
-          <input type="number" maxlength="4" class="entry" id="entry-width" placeholder="Szerokość skrzydła">
-          <input type="number" maxlength="4" class="entry" id="entry-height" placeholder="Wysokość skrzydła">
-          <input type="number" maxlength="4" class="entry" id="klamka" placeholder="Klamka">
+          <input type="number" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="entry" id="entry-width" placeholder="Szerokość skrzydła">
+          <input type="number" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="entry" id="entry-height" placeholder="Wysokość skrzydła">
+          <input type="number" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="entry" id="klamka" placeholder="Klamka">
           <button class="but" onclick="standart()">Standart</button>
           <button class="but" onclick="erc_one()">Poz ER1</button>
           <button class="but" onclick="erc_two()">Poz ER2</button>
@@ -104,8 +104,8 @@
       <h3 class="two-title" id="free-poziom">Poziom zabezpieczenia okucia</h3>
       <div class="xx-container">
         <div class="free-entry">
-          <input class="ent-but" maxlength="4" type="number" id="xx-input-width" placeholder="Szerokość skrydła">
-          <input class="ent-but" maxlength="4" type="number" id="xx-input-height" placeholder="Wysokość skrydła">
+          <input class="ent-but" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" id="xx-input-width" placeholder="Szerokość skrydła">
+          <input class="ent-but" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" id="xx-input-height" placeholder="Wysokość skrydła">
           <button class="ent-but" onclick="func_standart()">Standart</button>
           <button class="ent-but" onclick="func_er1()">Poziom ER 1</button>
           <button class="ent-but" onclick="func_er2()">Poziom ER 2</button>
