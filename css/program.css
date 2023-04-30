@@ -113,6 +113,11 @@ input::-webkit-inner-spin-button {
     background-color: aqua;
     height: 100vh;
 }
+.style-input{
+    border-radius: 10px;
+    border-color: blue;
+    border-width: 4px;
+}
 
 .xx-container{
     display: flex;
