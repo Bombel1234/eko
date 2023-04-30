@@ -48,6 +48,13 @@
     border-radius: 10px;
     transition: 0.7s;
 }
+.input:focus{
+    box-shadow: 0 0 15px rgb(14, 3, 228);
+    background-color: rgb(218, 215, 215);
+}
+input::placeholder{
+    color: black;
+}
 .entry:hover{
     width: 170px;
     border-color: red;
