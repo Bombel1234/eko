@@ -1,4 +1,4 @@
-let person = ['janek', 'tomek', 'stefan', 'andrzej', 'jacek', 'kuba', 'adam']
+let person = ['Janek', 'Tomek', 'Stefan', 'Andrzej', 'Jacek', 'Kuba', 'Adam']
 
 
 function passWord() {
