@@ -110,7 +110,7 @@ input::-webkit-inner-spin-button {
 }
 /* ###################################### */
 .free-section{
-    background-color: aqua;
+    background-color:  rgba(105, 123, 123, 0.376);
     height: 100vh;
 }
 .style-input{
