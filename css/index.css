@@ -14,9 +14,10 @@ body {
 	align-items: center;
 	min-height: 100vh;
 	flex-direction: column;
-	/* background: #23242a; */
 	background-image: url(../resors/window.jpg);
-	
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
 
