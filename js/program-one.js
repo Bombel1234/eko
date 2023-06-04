@@ -1,3 +1,14 @@
+function showDialog() {
+    const dialog = document.getElementById("myDialog");
+    dialog.showModal();
+
+}
+function closeDialog() {
+    const dialog = document.getElementById("myDialog"); 
+    dialog.close();
+    
+} 
+
 
 
 function standart() { 
@@ -7,8 +18,9 @@ function standart() {
     document.getElementById('typ-okucia').innerText = 'Poziom zabezpieczenia okucia: STANDART >>> schemat okucia na rysunku 1';
     document.getElementById('clear').style.display = 'block';
     
-    if (height>2800){
-        alert('UWAGA: NIEMA TAKICH WYMIARÓW -->WYSOKOŚĆ')
+    if (height>2800 || height<=279 || width > 1600){
+        showDialog();
+        document.querySelector('.title-dialog').innerText = 'Uwaga:  Niema takich zakresów!!!';
         data_delete();
     }
     
@@ -18,6 +30,7 @@ function standart() {
         myfunc_std(width);
         myfunc_std1(width);
     }
+    
 }
 function myfunc_std(width) {
     //dol 
@@ -28,16 +41,11 @@ function myfunc_std(width) {
         document.getElementById('dol').innerText = 600;
     }
     else if (width > 1400 && width <= 1600) {
-        alert('UWAGA: DODATKOWY UCHYŁ >>>> Instrukcja na rys 4')
+        showDialog();
+        document.querySelector('.title-dialog').innerText = 'Uwaga:  Dodatkowa nożyca!!!';
         document.getElementById('dol').innerText = '600   400';
     }
-    else if (width > 1600) {
-        alert('UWAGA: NIE MAMY TAKICH WYMIARÓW - SZEROKOŚĆ')
-        document.getElementById('dol').innerText = '';
-        document.getElementById('gora').innerText = '';
-        document.getElementById('pl').innerText = '';
-        document.getElementById('zas').innerText = '';
-    }
+    
     //gora
 } 
 function myfunc_std1(width){
@@ -62,8 +70,9 @@ function erc_one() {
     document.getElementById('typ-okucia').innerText = 'Poziom zabezpieczenia okucia: ER 1 >>> Schemat okucia na rysunku 2' ;
     document.getElementById('clear').style.display = 'block';
    
-    if (height>2800){
-        alert('UWAGA: NIE MAMY TAKICH WYMIARÓW ---> wysokość');
+    if (height>2800 ||height < 280 || width > 1400){
+        showDialog();
+        document.querySelector('.title-dialog').innerText = 'Uwaga:  Niema takich zakresów!!!';
         data_delete();
     }
     else{
@@ -93,14 +102,7 @@ function myfuncer1(width){
     else if (width > 1200 && width <= 1400) {    
         document.getElementById('dol').innerText = '600   400';
     }
-    else if (width>1400){
-        alert('UWAGA:  NIE MAMY TAKICH ZAKRESÓW ---> szerokość!!!')
-        document.getElementById('dol').innerText = '';
-        document.getElementById('gora').innerText = '';
-        document.getElementById('pl').innerText = '';
-        document.getElementById('zas').innerText = '';
-        document.getElementById('nsp').innerText = '';
-    }
+    
 }
 function myfuncer_1(width) {
     //gora
@@ -124,8 +126,9 @@ function erc_two() {
     document.getElementById('typ-okucia').innerText = 'Pozim zabezpieczenia okucia: ER 2 >>> Schemat okucia na rysunku 3';
     document.getElementById('clear').style.display = 'block';
     
-    if (height>2600){
-        alert('UWAGA: NIE MAMY TAKICH ZAKRESÓW --> WYSOKOŚĆ')
+    if (height>2600 || height<601 || width>1400){
+        showDialog();
+        document.querySelector('.title-dialog').innerText = 'Uwaga:  Niema takich zakresów!!!';
         data_delete();
     }
     else{
@@ -216,11 +219,12 @@ function myfuncEr2_2(height, klamka) {
         document.getElementById('nsp').innerText = '1121';
     }
     else if (height>2400 && height<=2600 && klamka==1020){
-        document.getElementById('zas').innerText = '???';
-        document.getElementById('nsp').innerText = '???';
+        document.getElementById('zas').innerText = '700 1370 1770';
+        document.getElementById('nsp').innerText = '1121';
     }
     else{
-        alert('UWAGA:NIESTANDART---> klamka albo zakres')
+        showDialog();
+        document.querySelector('.title-dialog').innerText = 'Uwaga:  Niestandart!!!';
         data_delete();
     }
 }
@@ -244,14 +248,7 @@ function myfuncEr2_3(width) {
     else if (width>1290 && width<=1400){
         document.getElementById('dol').innerText = '600   400';
     }
-    else if (width>1400){
-        alert('UWAGA: NIE MAMY TAKICH ZAKRESOW -->szerokosc');
-        document.getElementById('dol').innerText = '';
-        document.getElementById('gora').innerText = '';
-        document.getElementById('pl').innerText = '';
-        document.getElementById('zas').innerText = '';
-        document.getElementById('nsp').innerText = '';
-    }
+    
 }
 function myfuncEr2_4(width) {
     //gora
@@ -347,12 +344,13 @@ function select_zasuwnica(height, klamka) {
         document.getElementById('nsp').innerText = '1121';
     }
     else if (height>2600 && height<=2800 && klamka == 1020) {
-        document.getElementById('zas').innerText = '+MV??';
-        document.getElementById('nsp').innerText = '???';
+        document.getElementById('zas').innerText = '700 1370 1770';
+        document.getElementById('nsp').innerText = '1121';
     }
     else {
         data_delete();
-        alert('UWAGA: NIESTANDART!!! --> klamka albo zakres')
+        showDialog();
+        document.querySelector('.title-dialog').innerText = 'Uwaga:  Niestandart!!!';
     }
     
 }
