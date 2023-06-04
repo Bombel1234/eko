@@ -197,6 +197,9 @@ input::-webkit-inner-spin-button {
     .my-info{
         font-size: 30px;
     }
+    .kont{
+        width: 300px;
+    }
 }
 @media(max-width:650px){
     .two-res-name,
