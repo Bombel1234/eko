@@ -15,7 +15,7 @@ function standart() {
     let width = document.getElementById('entry-width').value;
     let height = document.getElementById('entry-height').value;
     let klamka = document.getElementById('klamka').value;
-    document.getElementById('typ-okucia').innerText = 'Poziom zabezpieczenia okucia: STANDART >>> schemat okucia na rysunku 1';
+    document.getElementById('typ-okucia').innerText = 'Poziom zabezpieczenia okucia: STANDART';
     document.getElementById('clear').style.display = 'block';
 
     if (width !== '' && height !== '' && klamka !== '') {
@@ -74,7 +74,7 @@ function erc_one() {
     let width = document.getElementById('entry-width').value;
     let height = document.getElementById('entry-height').value;
     let klamka = document.getElementById('klamka').value;
-    document.getElementById('typ-okucia').innerText = 'Poziom zabezpieczenia okucia: ER 1 >>> Schemat okucia na rysunku 2';
+    document.getElementById('typ-okucia').innerText = 'Poziom zabezpieczenia okucia: ER 1';
     document.getElementById('clear').style.display = 'block';
     if (width !== '' && height !== '' && klamka !== '') {
         if (height > 2800 || height < 280 || width > 1400) {
@@ -136,7 +136,7 @@ function erc_two() {
     let width = document.getElementById('entry-width').value;
     let height = document.getElementById('entry-height').value;
     let klamka = document.getElementById('klamka').value;
-    document.getElementById('typ-okucia').innerText = 'Pozim zabezpieczenia okucia: ER 2 >>> Schemat okucia na rysunku 3';
+    document.getElementById('typ-okucia').innerText = 'Pozim zabezpieczenia okucia: ER 2';
     document.getElementById('clear').style.display = 'block';
     if (width !== '' && height !== '' && klamka !== '') {
         if (height > 2600 || height < 601 || width > 1400) {
