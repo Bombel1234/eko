@@ -83,7 +83,7 @@
         </div>
         <dialog class="dialogModal" id="myDialog">
           <div class="kont">
-            <p class="title-dialog">uwagakhbjhguytfljhkugutdrdtesesfdzdxgfcjhvjlhkuhkuhkukgjgygjyjv</p>
+            <p class="title-dialog"></p>
           </div>
           <button class="close-dialog" onclick="closeDialog()">Close</button>
         </dialog>
@@ -106,16 +106,22 @@
 
 
     <section class="free-section">
-      <h3 class="two-title">Program dla okucia dwóskrzydlowych</h3>
+      <h3 class="two-title">Program dla okucia dwóskrzydlowych ram</h3>
       <h3 class="two-title" id="free-poziom">Poziom zabezpieczenia okucia</h3>
       <div class="xx-container">
         <div class="free-entry">
           <input class="ent-but style-input" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" id="xx-input-width" placeholder="Szerokość skrydła">
           <input class="ent-but style-input" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" id="xx-input-height" placeholder="Wysokość skrydła">
-          <button class="ent-but" onclick="func_standart()">Standart</button>
-          <button class="ent-but" onclick="func_er1()">Poziom ER 1</button>
-          <button class="ent-but" onclick="func_er2()">Poziom ER 2</button>
+          <button class="ent-but xx" onclick="func_standart()">Standart</button>
+          <button class="ent-but xx" onclick="func_er1()">Poziom ER 1</button>
+          <button class="ent-but xx" onclick="func_er2()">Poziom ER 2</button>
         </div>
+        <dialog class="dialogModal" id="myDialog">
+          <div class="kont">
+            <p class="title-dialog"></p>
+          </div>
+          <button class="close-dialog" onclick="closeDialog()">Close</button>
+        </dialog>
         <div class="info-stron">
           <p class="text-str">Góra</p>
           <p class="text-str">Plecy</p>
@@ -129,7 +135,6 @@
           <p class="my-info dol" id="my-dol"></p>
         </div>
       </div>
-      
     </section>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
