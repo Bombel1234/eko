@@ -14,7 +14,7 @@ function func_standart(params) {
     let width = document.getElementById('xx-input-width').value;
     let height = document.getElementById('xx-input-height').value;
     document.getElementById('my-dot').style.color = 'black';
-    document.getElementById('free-poziom').innerText = 'Poziom zabezpieczenia okucia: Standart >>> Schemat okucia na rysunku 1';
+    document.getElementById('free-poziom').innerText = 'Poziom zabezpieczenia okucia: Standart';
     if (width !== '' && height !== '') {
         if (height > 2800 || height < 280 || width > 1600) {
             showDialog();
@@ -73,7 +73,7 @@ function func_er1() {
     let height = document.getElementById('xx-input-height').value;
 
     document.getElementById('my-dot').style.color = 'red';
-    document.getElementById('free-poziom').innerText = 'Poziom zabezpieczenia okucia: ER 2 >>> Schemat okucia na rysunku 2';
+    document.getElementById('free-poziom').innerText = 'Poziom zabezpieczenia okucia: ER 1';
 
     if (width !== '' && height !== '') {
         if (height > 2800 || height <= 279 || width > 1400) {
@@ -176,7 +176,7 @@ function func_er2() {
     let width = document.getElementById('xx-input-width').value;
     let height = document.getElementById('xx-input-height').value;
     document.getElementById('my-dot').style.color = 'red';
-    document.getElementById('free-poziom').innerText = 'Poziom zabezpieczenia okucia: ER 2 >>> Schemat okucia na rysunku 3';
+    document.getElementById('free-poziom').innerText = 'Poziom zabezpieczenia okucia: ER 2';
 
     if (width !== '' && height !== '') {
         if (height > 2600 || height < 601 || width > 1400) {
