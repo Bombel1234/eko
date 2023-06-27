@@ -98,6 +98,9 @@ a{
     justify-content: space-around;
     margin-left: 40px;
 }
+.box-typ-okna{
+    margin-left: 100px;
+}
 .select{
     font-size: 24px;
     color: blue;
@@ -265,5 +268,8 @@ label{
     .menu-list{
         display: flex;
         justify-content: space-evenly;
+    }
+    .data{
+        display: none;
     }
 }
